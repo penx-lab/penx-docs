@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 export const Logo = () => {
   return (
     <div
       style={{
-        display: 'flex',
-        alignItems: 'center',
+        display: "flex",
+        alignItems: "center",
         gap: 8,
       }}
     >
@@ -13,11 +13,11 @@ export const Logo = () => {
       <span
         style={{
           fontSize: 24,
-          fontWeight: 'bold',
+          fontWeight: "bold",
         }}
       >
-        PenX
+        Plantree
       </span>
     </div>
-  )
-}
+  );
+};

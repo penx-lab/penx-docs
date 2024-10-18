@@ -11,10 +11,10 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: "https://github.com/plantree-xyz/plantree-docs",
   sidebar: {
-    // defaultMenuCollapseLevel: 2
+    defaultMenuCollapseLevel: 2
   },
   footer: {
-    text: "PenX Docs",
+    text: "Plantree Docs",
   },
 };
 

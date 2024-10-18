@@ -1,7 +1,9 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
+  "getting-started": "Getting started",
+  "guides": "Guides",
+  "deployment": "deployment",
+  "contributing": "contributing",
   "about": {
     "title": "About",
     "type": "page"
