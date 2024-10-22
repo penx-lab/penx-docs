@@ -1,7 +1,6 @@
-import { DocsThemeConfig } from "nextra-theme-docs";
 import { Logo } from "./components/Logo";
 
-const config: DocsThemeConfig = {
+export default {
   logo: <Logo></Logo>,
   project: {
     link: "https://github.com/plantree-xyz/plantree",
@@ -11,11 +10,17 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: "https://github.com/plantree-xyz/plantree-docs",
   sidebar: {
-    defaultMenuCollapseLevel: 2
+    defaultMenuCollapseLevel: 2,
   },
   footer: {
-    text: "Plantree Docs",
+    content: (
+      <span>
+        MIT {new Date().getFullYear()} ©{" "}
+        <a href="https://nextra.site" target="_blank">
+          Plantree
+        </a>
+        .
+      </span>
+    ),
   },
 };
-
-export default config;
