@@ -1,16 +1,18 @@
 # Environment Variables
 
+
+
 Below is a comprehensive list of environment variables essential for configuring your application. Each variable is integral to the deployment and functionality of your app.
 
 | Variable                   | Description                                   | Example Value                           |
 |----------------------------|-----------------------------------------------|-----------------------------------------|
+| `NEXT_PUBLIC_THEME`        | UI theme of the application                   | `plantree-theme-minimal`                |
 | `NEXTAUTH_SECRET`          | Secure key for authentication sessions        | `your-secret-key`                       |
 | `NEXT_PUBLIC_AUTH_TYPE`    | Type of authentication provider               | `REOWN`                                 |
 | `NEXT_PUBLIC_UPLOAD_PROVIDER` | File upload service                       | `IPFS`                                  |
 | `NEXT_PUBLIC_SPACE_ID`     | Unique space identifier                       | `your-space-id`                         |
-| `NEXT_PUBLIC_PROJECT_ID`   | Unique project identifier                     | `your-project-id`                       |
 | `NEXT_PUBLIC_POSTS_PAGE_SIZE` | Number of posts per page                   | `20`                                    |
-| `NEXT_PUBLIC_THEME`        | UI theme of the application                   | `plantree-theme-minimal`                |
+| `NEXT_PUBLIC_PROJECT_ID`   | Unique project identifier                     | `your-project-id`                       |
 | `DATABASE_URL`             | Connection string for PostgreSQL              | `your-database-url`                     |
 | `BLOB_READ_WRITE_TOKEN`    | Token for Vercel Blob operations              | `your-token`                            |
 | `NEXT_PUBLIC_PRIVY_APP_ID` | Privy Application ID                          | `your-privy-app-id`                     |
@@ -18,3 +20,80 @@ Below is a comprehensive list of environment variables essential for configuring
 | `POSTGRES_PRISMA_URL`      | Connection string for Prisma                  | `your-prisma-url`                       |
 
 ## Configuration Details
+
+### **NEXT_PUBLIC_THEME**
+
+The `NEXT_PUBLIC_THEME` variable sets the UI theme of your application. This setting determines the color scheme, typography, and layout of the application.
+
+Available options are:
+
+- `plantree-theme-minimal`: A minimalistic theme with a clean and minimalist design.
+
+### **NEXTAUTH_SECRET**
+
+The `NEXTAUTH_SECRET` is crucial for securing authentication sessions in your application. Keep this key private to maintain session integrity and security.
+
+For a quick and secure secret generation, use the [Vercel Secret Generator](https://generate-secret.vercel.app/32). It provides a strong 32-character string ideal for this purpose.
+
+### **NEXT_PUBLIC_AUTH_TYPE**
+
+The `NEXT_PUBLIC_AUTH_TYPE` specifies the type of wallet service provider for your application. This setting determines how users authenticate with the app.
+
+Available options are:
+
+- `GOOGLE`: Use Google as the authentication provider, ideal for seamless integration with Google services.
+- `REOWN`: A decentralized authentication option for enhanced privacy and control.
+- `PRIVY`: Offers secure and private authentication, focusing on user data protection.
+
+Choose the provider that best fits your application's authentication needs.
+
+### **NEXT_PUBLIC_UPLOAD_PROVIDER**
+
+The `NEXT_PUBLIC_UPLOAD_PROVIDER` defines the file upload service used by your application. This configuration affects how and where files are stored and accessed.
+
+Available options are:
+
+- `IPFS`: A decentralized file storage system, suitable for applications requiring distributed and immutable storage.
+- `VERCEL_BLOB`: Vercel's native file storage solution, perfect for seamless integration with Vercel-hosted applications.
+
+Select the provider based on your application's file storage requirements and preferences.
+
+
+### **NEXT_PUBLIC_SPACE_ID**
+
+The `NEXT_PUBLIC_SPACE_ID` is a unique on-chain contract address that serves as the web3 core of Plantree. It plays a crucial role in identifying and interacting with your specific space within the Plantree ecosystem.
+
+To create and obtain this ID, visit [Plantree's Create Space](https://www.plantree.xyz/create-space).
+
+Ensure this ID is correctly configured to enable seamless interaction with the Plantree network.
+
+### **NEXT_PUBLIC_POSTS_PAGE_SIZE**
+
+The `NEXT_PUBLIC_POSTS_PAGE_SIZE` specifies the number of blog posts displayed per page. This setting affects pagination and user navigation within your application. 
+
+The default value is `20`, but you can adjust this based on your application's design and user experience requirements.
+
+### **NEXT_PUBLIC_PROJECT_ID**
+
+The `NEXT_PUBLIC_PROJECT_ID` is the project ID for Reown. It serves as a unique identifier for your application within the Reown ecosystem.
+
+Ensure this ID is set correctly to enable integration with Reown services.
+
+### **DATABASE_URL**
+
+The `DATABASE_URL` is the connection string for your PostgreSQL database. This URL is essential for establishing a secure connection to your database.
+
+You can create and obtain this URL using Vercel's Postgres services.
+
+### **BLOB_READ_WRITE_TOKEN**
+
+The `BLOB_READ_WRITE_TOKEN` is a token used for read and write operations with Vercel Blob. This token is crucial for managing file uploads and storage within your application.
+
+Generate and obtain this token through Vercel Blob services.
+
+### **NEXT_PUBLIC_PRIVY_APP_ID**
+
+The `NEXT_PUBLIC_PRIVY_APP_ID` is the application ID for another wallet provider, Privy. This ID is necessary for integrating Privy authentication and services into your application.
+
+Ensure this ID is correctly configured to utilize Privy's secure authentication features.
+
