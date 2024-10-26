@@ -1,1 +1,124 @@
-# vercel
+import { Callout } from 'nextra/components'
+import { useState } from 'react'
+import { Cards } from 'nextra/components'
+import { Logo } from '@/components/Logo'
+import { GithubIcon } from '@/components/icons/GithubIcon'
+import { VercelIcon } from '@/components/icons/VercelIcon'
+import { Steps } from 'nextra/components'
+ 
+ 
+# Deploying Plantree on Vercel
+
+Follow this comprehensive guide to deploy your Plantree project on Vercel.
+
+## Account Creation
+
+Start by creating accounts on GitHub and Vercel. GitHub will host your code, while Vercel manages deployment. Click the cards below to sign up for each platform:
+
+<Cards>
+  <Cards.Card
+    icon={<GithubIcon />}
+    title="GitHub"
+    href="https://github.com/signup?source=login"
+    target="_blank"
+    rel="noopener noreferrer"
+  />
+  <Cards.Card
+    icon={<VercelIcon />}
+    title="Vercel"
+    href="https://vercel.com/login"
+    target="_blank"
+    rel="noopener noreferrer"
+  />
+</Cards>
+
+## Middleware Configuration
+
+Set up two essential services before deploying Plantree: Vercel Blob for storing images and static resources, and Vercel Database for managing additional data.
+
+Log in to Vercel at https://vercel.com/.
+
+### Vercel Blob Configuration
+
+<Steps>
+
+{<h3>Access Storage</h3>}
+
+Click the Storage tab to open the Vercel storage page:
+
+![vercel-storage-page](/images/screenshot/vercel-storage-page.png)
+
+{<h3>Create Blob</h3>}
+
+Follow the on-screen steps to name and create your Blob:
+
+![vercel-blob-create](/images/screenshot/vercel-blob-create.png)
+
+{<h3>Retrieve Secret</h3>}
+
+Access your Blob dashboard to locate and note your Blob secret:
+
+![vercel-blob-check-secret](/images/screenshot/vercel-blob-check-secret.png)
+
+</Steps>
+
+
+### Vercel Postgres Configuration
+
+After Blob setup, create a Postgres database on the Vercel storage page.
+
+<Steps>
+
+{<h3>Initiate Setup</h3>}
+
+![vercel-postgres-create-start](/images/screenshot/vercel-postgres-create-start.png)
+
+{<h3>Configure Database</h3>}
+
+Enter a database name and select your region:
+
+![vercel-postgres-create-config](/images/screenshot/vercel-postgres-create-config.png)
+
+{<h3>Retrieve Secret</h3>}
+
+Access your Postgres dashboard to retrieve your secret keys:
+
+![vercel-postgres-check-secret](/images/screenshot/vercel-postgres-check-secret.png)
+
+</Steps>
+
+### Wallet Connector (Optional)
+
+...
+
+## Plantree Deployment
+
+Click the button below to initiate your deployment tour and redirect to the Vercel deploy page:
+
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fplantree-xyz%2Fplantree&project-name=plantree&repository-name=plantree&env=NEXTAUTH_SECRET,NEXT_PUBLIC_THEME,BLOB_READ_WRITE_TOKEN,DATABASE_URL,NEXT_PUBLIC_SPACE_ID,NEXT_PUBLIC_PROJECT_ID,NEXT_PUBLIC_NETWORK,NEXT_PUBLIC_CONNECT_TYPE,NEXT_PUBLIC_POSTS_PAGE_SIZE,NEXT_PUBLIC_PRIVY_APP_ID,PRIVY_APP_SECRET&envDescription=Please%20provide%20the%20following%20environment%20variables)
+
+<Steps>
+
+{<h3>Connect to GitHub</h3>}
+
+Connect your GitHub account if not already connected:
+
+![vercel-plantree-deploy-connect-github1](/images/screenshot/vercel-plantree-deploy-connect-github1.png)
+
+{<h3>Select Repository</h3>}
+
+Choose the Git scope and enter your desired repository name:
+
+![vercel-plantree-deploy-connect-github2](/images/screenshot/vercel-plantree-deploy-connect-github2.png)
+
+{<h3>Configure Environment</h3>}
+
+Almost there! Set up the environment variables and click the deploy button:
+
+![vercel-plantree-deploy-env-config](/images/screenshot/vercel-plantree-deploy-env-config.png)
+
+{<h3>Await Deployment</h3>}
+
+Deployment will take a few minutes. Please be patient.
+
+</Steps>
