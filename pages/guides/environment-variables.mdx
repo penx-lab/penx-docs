@@ -1,24 +1,20 @@
 # Environment Variables
 
-## Optional Variables
-+ NEXTAUTH_SECRET: A secret key used to encrypt session data.
-+ NEXT_PUBLIC_NETWORK: The Web3 network to use.
-+ REOWN_PROJECT_ID: The unique identifier for a Reown project.
+Below is a comprehensive list of environment variables essential for configuring your application. Each variable is integral to the deployment and functionality of your app.
 
-## Required Variables
+| Variable                   | Description                                   | Example Value                           |
+|----------------------------|-----------------------------------------------|-----------------------------------------|
+| `NEXTAUTH_SECRET`          | Secure key for authentication sessions        | `your-secret-key`                       |
+| `NEXT_PUBLIC_AUTH_TYPE`    | Type of authentication provider               | `REOWN`                                 |
+| `NEXT_PUBLIC_UPLOAD_PROVIDER` | File upload service                       | `IPFS`                                  |
+| `NEXT_PUBLIC_SPACE_ID`     | Unique space identifier                       | `your-space-id`                         |
+| `NEXT_PUBLIC_PROJECT_ID`   | Unique project identifier                     | `your-project-id`                       |
+| `NEXT_PUBLIC_POSTS_PAGE_SIZE` | Number of posts per page                   | `20`                                    |
+| `NEXT_PUBLIC_THEME`        | UI theme of the application                   | `plantree-theme-minimal`                |
+| `DATABASE_URL`             | Connection string for PostgreSQL              | `your-database-url`                     |
+| `BLOB_READ_WRITE_TOKEN`    | Token for Vercel Blob operations              | `your-token`                            |
+| `NEXT_PUBLIC_PRIVY_APP_ID` | Privy Application ID                          | `your-privy-app-id`                     |
+| `PRIVY_APP_SECRET`         | Privy secret key                              | `your-privy-secret`                     |
+| `POSTGRES_PRISMA_URL`      | Connection string for Prisma                  | `your-prisma-url`                       |
 
-### Theme Configuration
-+ THEME_NAME: The name of the theme to apply.
-+ THEME_POSTS_PER_PAGE: The number of posts displayed per page.
-
-### Web3 Configuration
-+ WEB3_SPACE_ADDRESS: The address of your space on the Web3 network.
-+ WEB3_SPACE_CREATOR_ADDRESS: The address of the space creator on the Web3 network.
-
-### Storage Configuration
-+ STORAGE_BLOG_AUTH_TOKEN: The token used for authentication with the blog storage.
-+ STORAGE_DATABASE_URL: The connection URL for the PostgreSQL database.
-
-### Backup Configuration
-+ BACKUP_GOOGLE_CLIENT_ID: The client ID for the Google Drive backup service.
-+ BACKUP_GOOGLE_CLIENT_SECRET: The client secret for the Google Drive backup service.
+## Configuration Details
