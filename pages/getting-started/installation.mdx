@@ -6,16 +6,16 @@ import { Callout } from 'nextra/components'
 
 # Installation
 
-Learn how to install and run Plantree locally, covering setup, installation, and execution.
+Learn how to set up and run Plantree locally, covering all necessary steps from installation to execution.
 
 ## Requirements
 
 + [Node.js](https://nodejs.org/en/download/) version 18.0 or above.
-+ [PostgreSQL](https://www.postgresql.org/download/) version 16.0 or above for storing user data.
++ [PostgreSQL](https://www.postgresql.org/download/) version 16.0 or above for data storage.
 
 ## Clone the Repository
 
-Fork and clone the Plantree repository to your local machine. Here is the button above:
+Fork and clone the Plantree repository to your local machine:
 
 <br />
 
@@ -30,7 +30,7 @@ Fork and clone the Plantree repository to your local machine. Here is the button
 
 ## Project structure
 
-When you cloned the repository, you will see the following project structure:
+After cloning, your project will have the following structure:
 
 <FileTree>
   <FileTree.Folder name="plantree" defaultOpen>
@@ -101,20 +101,17 @@ When you cloned the repository, you will see the following project structure:
 <Steps>
 ### Install dependencies
 
-Navigate to the root directory of your project. Then, run one of the following commands to install the necessary dependencies:
+Navigate to your project's root directory. Run the following command to install dependencies:
 
 ```sh npm2yarn
 npm i
 ```
 
-
 ### Create `.env` file
 
-Create a new file named `.env` or Copy the `.env.example` file and rename it to `.env`.
+Copy the `.env.example` file and rename it to `.env`.
 
 ```sh
-touch .env
-# or
 copy .env.example .env
 ```
 
@@ -127,10 +124,10 @@ copy .env.example .env
 ### Config `.env` file
 
 <Callout type="info" emoji="ℹ️">
-  See the [Environment Variables](/guides/environment-variables) section for the full list.
+  See the [Environment Variables](/guides/environment-variables) section for all options.
 </Callout>
 
-Update `DATABASE_URL` with your personal connection string:
+Copy the following into your `.env` file:
 
 ```text {5}
 NEXT_PUBLIC_PROJECT_ID=3d31c4aa12acd88d0b8cad38b0a5686a
@@ -140,18 +137,34 @@ NEXTAUTH_SECRET=22a61fbc9af9bf8ea0bdcbba6258435c
 DATABASE_URL="postgresql://your_db_url"
 ```
 
+Parameter Descriptions:
+
+- **NEXT_PUBLIC_PROJECT_ID**: Project ID for Reown wallet integration. Default value available.
+- **NEXT_PUBLIC_POSTS_PAGE_SIZE**: Posts per page. Default value available.
+- **NEXT_PUBLIC_THEME**: UI theme. Default value available.
+- **NEXTAUTH_SECRET**:Secret key for session security. Generate at [generate-secret.vercel.app](https://generate-secret.vercel.app/32). Default value available.
+- **DATABASE_URL**: PostgreSQL connection string. Replace with your database URL.
+
+### Push db schema
+
+Synchronize your database schema:
+
+```sh
+npx prisma db push
+```
+
 ### Start the server
 
-Start the development server by running the following command:
+Run the development server:
 
 ```sh npm2yarn
 npm run dev
 ```
 
-Once started, the server URL will be displayed in the terminal, usually http://localhost:3000.
+Access the server at http://localhost:3000.
 
 </Steps>
 
-Next, check out the next section to learn about configuring the website. 
+Continue to the next section for website configuration.
 
 
