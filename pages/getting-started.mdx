@@ -1,15 +1,25 @@
-import { Steps } from 'nextra/components'
+import { Cards } from 'nextra/components'
+import { InstallIcon } from '@/components/icons/InstallIcon'
+import { Configuration } from '@/components/icons/Configuration'
 
 # Getting Started
 
-<Steps>
-### Install
+The following features are configured via the Next.js configuration and are available in all themes.
 
-To create a Nextra Docs site manually, you have to install **Next.js**,
-**React**, **Nextra**, and **Nextra Docs Theme**. In your project directory, run
-the following command to install the dependencies:
+<div></div>
 
-```sh npm2yarn
-npm i next react react-dom nextra nextra-theme-docs
-```
-</Steps>
+
+<Cards>
+  <Cards.Card
+    icon={<InstallIcon />}
+    title="Installation"
+    href="/getting-started/installation"
+  />
+  <Cards.Card
+    icon={<Configuration />}
+    title="Configuration"
+    href="/getting-started/configuration"
+  />
+</Cards>
+
+

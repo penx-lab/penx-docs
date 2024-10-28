@@ -1,0 +1,157 @@
+import { Steps } from 'nextra/components'
+import { FileTree } from 'nextra/components'
+import { Cards } from 'nextra/components'
+import { GithubIcon } from '@/components/icons/GithubIcon'
+import { Callout } from 'nextra/components'
+
+# Installation
+
+Learn how to install and run Plantree locally, covering setup, installation, and execution.
+
+## Requirements
+
++ [Node.js](https://nodejs.org/en/download/) version 18.0 or above.
++ [PostgreSQL](https://www.postgresql.org/download/) version 16.0 or above for storing user data.
+
+## Clone the Repository
+
+Fork and clone the Plantree repository to your local machine. Here is the button above:
+
+<br />
+
+<Cards.Card
+    icon={<GithubIcon />}
+    title="Plantree Repository"
+    href="https://github.com/signup?source=login"
+    target="_blank"
+    rel="noopener noreferrer"
+    arrow
+/>
+
+## Project structure
+
+When you cloned the repository, you will see the following project structure:
+
+<FileTree>
+  <FileTree.Folder name="plantree" defaultOpen>
+    <FileTree.Folder name="app" />
+    <FileTree.Folder name="components" />
+    <FileTree.Folder name="domains"  />
+    <FileTree.Folder name="fonts" />
+    <FileTree.Folder name="hooks" />
+    <FileTree.Folder name="lib" />
+    <FileTree.Folder name="prisma">
+      <FileTree.File name="schema.prisma" />
+    </FileTree.Folder>
+    <FileTree.Folder name="public" />
+    <FileTree.Folder name="server" />
+    <FileTree.Folder name="store" />
+    <FileTree.Folder name="styles" />
+    <FileTree.File name=".env" />
+    <FileTree.File name="components.json" />
+    <FileTree.File name="next.config.js" />
+    <FileTree.File name="package.json" />
+    <FileTree.File name="postcss.config.js" />
+    <FileTree.File name="tailwind.config.ts" />
+    <FileTree.File name="tsconfig.json" />
+  </FileTree.Folder>
+</FileTree>
+
+### Project structure rundown
+
+- `/app/`: Contains the main application logic, including pages and routing.
+  
+- `/components/`: Holds reusable UI components that can be shared across different parts of the application.
+  
+- `/domains/`: Organizes domain-specific logic, separating different business contexts.
+  
+- `/fonts/`: Stores font files used throughout the application.
+  
+- `/hooks/`: Includes custom React hooks to encapsulate logic that can be reused across components.
+  
+- `/lib/`: Contains utility functions and libraries that assist in various tasks.
+  
+- `/prisma/`: Manages database schemas and migrations using Prisma ORM.
+  
+- `/public/`: Houses static files such as images and other assets accessible to the client.
+  
+- `/server/`: Includes server-side logic and configurations.
+  
+- `/store/`: Manages application state using state management libraries like Redux.
+  
+- `/styles/`: Contains global styles and CSS files used in the application.
+  
+- `.env`: Environment variables configuration file for different environments.
+  
+- `components.json`: Custom configuration or inventory of components used in the project.
+  
+- `next.config.js`: Configuration file for customizing the Next.js application behavior.
+  
+- `package.json`: Lists project dependencies and scripts for managing the project.
+  
+- `postcss.config.js`: Configuration for PostCSS, used for transforming CSS with JavaScript plugins.
+  
+- `tailwind.config.ts`: Configuration file for Tailwind CSS, setting up design tokens and themes.
+  
+- `tsconfig.json`: TypeScript configuration file, specifying compiler options and project settings.
+
+
+## Running the development server
+
+<Steps>
+### Install dependencies
+
+Navigate to the root directory of your project. Then, run one of the following commands to install the necessary dependencies:
+
+```sh npm2yarn
+npm i
+```
+
+
+### Create `.env` file
+
+Create a new file named `.env` or Copy the `.env.example` file and rename it to `.env`.
+
+```sh
+touch .env
+# or
+copy .env.example .env
+```
+
+<FileTree>
+  <FileTree.Folder name="plantree" defaultOpen>
+    <FileTree.File name=".env" active='true' />
+  </FileTree.Folder>
+</FileTree>
+
+### Config `.env` file
+
+<Callout type="info" emoji="ℹ️">
+  See the [Environment Variables](/guides/environment-variables) section for the full list.
+</Callout>
+
+Update `DATABASE_URL` with your personal connection string:
+
+```text {5}
+NEXT_PUBLIC_PROJECT_ID=3d31c4aa12acd88d0b8cad38b0a5686a
+NEXT_PUBLIC_POSTS_PAGE_SIZE=20
+NEXT_PUBLIC_THEME=plantree-theme-minimal
+NEXTAUTH_SECRET=22a61fbc9af9bf8ea0bdcbba6258435c
+DATABASE_URL="postgresql://your_db_url"
+```
+
+### Start the server
+
+Start the development server by running the following command:
+
+```sh npm2yarn
+npm run dev
+```
+
+Once started, the server URL will be displayed in the terminal, usually http://localhost:3000.
+
+</Steps>
+
+Next, check out the next section to learn about configuring the website. 
+
+
