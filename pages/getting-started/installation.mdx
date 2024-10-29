@@ -6,7 +6,7 @@ import { Callout } from 'nextra/components'
 
 # Installation
 
-Learn how to set up and run Plantree locally, covering all necessary steps from installation to execution.
+Learn how to set up and run `Plantree` locally, covering all necessary steps from installation to execution.
 
 ## Requirements
 
@@ -15,18 +15,11 @@ Learn how to set up and run Plantree locally, covering all necessary steps from 
 
 ## Clone the Repository
 
-Fork and clone the Plantree repository to your local machine:
+Fork and clone the `Plantree` repository to your local machine:
 
-<br />
-
-<Cards.Card
-    icon={<GithubIcon />}
-    title="Plantree Repository"
-    href="https://github.com/signup?source=login"
-    target="_blank"
-    rel="noopener noreferrer"
-    arrow
-/>
+```sh copy
+git clone https://github.com/plantree-xyz/plantree
+```
 
 ## Project structure
 
@@ -99,57 +92,39 @@ After cloning, your project will have the following structure:
 ## Running the development server
 
 <Steps>
+
 ### Install dependencies
 
 Navigate to your project's root directory. Run the following command to install dependencies:
 
-```sh npm2yarn
+```sh npm2yarn copy
 npm i
 ```
-
-### Create `.env` file
-
-Copy the `.env.example` file and rename it to `.env`.
-
-```sh
-copy .env.example .env
-```
-
-<FileTree>
-  <FileTree.Folder name="plantree" defaultOpen>
-    <FileTree.File name=".env" active='true' />
-  </FileTree.Folder>
-</FileTree>
 
 ### Config `.env` file
 
 <Callout type="info" emoji="ℹ️">
-  See the [Environment Variables](/guides/environment-variables) section for all options.
+  See the [📄Environment Variables](/guides/environment-variables) section for all options.
 </Callout>
 
-Copy the following into your `.env` file:
+<Callout type="info" emoji="ℹ️">
+  To get the `DATABASE_URL`, refer to the [📄Create Vercel PostgresSQL Guide](/guides/create-vercel-postgres).
+</Callout>
 
-```text {5}
+The `.env` file contents are as follows, Replace `your_db_url` with your PostgreSQL database URL:
+
+```text {4} copy
 NEXT_PUBLIC_PROJECT_ID=3d31c4aa12acd88d0b8cad38b0a5686a
 NEXT_PUBLIC_POSTS_PAGE_SIZE=20
 NEXT_PUBLIC_THEME=plantree-theme-minimal
-NEXTAUTH_SECRET=22a61fbc9af9bf8ea0bdcbba6258435c
 DATABASE_URL="postgresql://your_db_url"
 ```
-
-Parameter Descriptions:
-
-- **NEXT_PUBLIC_PROJECT_ID**: Project ID for Reown wallet integration. Default value available.
-- **NEXT_PUBLIC_POSTS_PAGE_SIZE**: Posts per page. Default value available.
-- **NEXT_PUBLIC_THEME**: UI theme. Default value available.
-- **NEXTAUTH_SECRET**:Secret key for session security. Generate at [generate-secret.vercel.app](https://generate-secret.vercel.app/32). Default value available.
-- **DATABASE_URL**: PostgreSQL connection string. Replace with your database URL.
 
 ### Push db schema
 
 Synchronize your database schema:
 
-```sh
+```sh copy
 npx prisma db push
 ```
 
@@ -157,7 +132,7 @@ npx prisma db push
 
 Run the development server:
 
-```sh npm2yarn
+```sh npm2yarn copy
 npm run dev
 ```
 
