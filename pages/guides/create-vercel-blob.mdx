@@ -1,0 +1,46 @@
+import { Cards } from 'nextra/components'
+import { VercelIcon } from '@/components/icons/VercelIcon'
+import { Steps } from 'nextra/components'
+
+# Create Vercel Blob
+
+Learn how to create a Blob on Vercel and retrieve its connection string.
+
+## Requirements
+
+First, ensure you have a Vercel account. Click the button below to log in or sign up.
+
+<br />
+
+<Cards.Card
+    icon={<VercelIcon />}
+    title="Vercel"
+    href="https://vercel.com/login"
+    target="_blank"
+    rel="noopener noreferrer"
+    arrow
+/>
+
+## Create Steps
+
+<Steps>
+
+### Log in Vercel
+
+Log in to Vercel and navigate to the dashboard. Open the **Storage** page.
+
+![vercel-storage-page](/images/screenshot/vercel-storage-page.png)
+
+### Choose Blob
+
+Click the **Create** button, Fill in the **Blob name** and submit the form to finalize your Blob creation.
+
+![vercel-blob-create](/images/screenshot/vercel-blob-create.png)
+
+### Retrieve Secrets
+
+Go to your Blob dashboard to find and note your Blob secret:
+
+![vercel-blob-check-secret](/images/screenshot/vercel-blob-check-secret.png)
+
+</ Steps>

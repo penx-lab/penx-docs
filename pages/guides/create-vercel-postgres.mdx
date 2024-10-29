@@ -1,0 +1,53 @@
+import { Cards } from 'nextra/components'
+import { VercelIcon } from '@/components/icons/VercelIcon'
+import { Steps } from 'nextra/components'
+ 
+
+# Create Vercel PostgesSQL
+
+Learn how to create a PostgreSQL database on Vercel and retrieve its connection string.
+
+## Requirements
+
+First, ensure you have a Vercel account. Click the button below to log in or sign up.
+
+<br />
+
+<Cards.Card
+    icon={<VercelIcon />}
+    title="Vercel"
+    href="https://vercel.com/login"
+    target="_blank"
+    rel="noopener noreferrer"
+    arrow
+/>
+
+## Create Steps
+
+<Steps>
+
+### Log in Vercel
+
+Log in to Vercel and navigate to the dashboard. Open the **Storage** page.
+
+![vercel-storage-page](/images/screenshot/vercel-storage-page.png)
+
+### Choose PostgreSQL
+
+Click the **Create** button and **review** the terms and conditions to start setting up your database.
+
+![vercel-postgres-create-start](/images/screenshot/vercel-postgres-create-start.png)
+
+### Configure Your Database
+
+Enter a **name** for your database and select the appropriate **region**.
+
+![vercel-postgres-create-config](/images/screenshot/vercel-postgres-create-config.png)
+
+### Retrieve Secrets
+
+Access your Postgres dashboard to obtain your secret keys.
+
+![vercel-postgres-check-secret](/images/screenshot/vercel-postgres-check-secret.png)
+
+</ Steps>

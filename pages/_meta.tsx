@@ -1,5 +1,10 @@
+import { title } from "process";
+
 export default {
   index: "Introduction",
+  "fast-track": {
+    title: "🚀 Fast Track",
+  },
   "getting-started": "Getting Started",
   guides: "Guides",
   deployment: "Deployment",
