@@ -38,7 +38,7 @@ Make sure you have accounts on both GitHub and Vercel. Log in to both platforms,
 
 Click the button below to start the deployment process:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fplantree-xyz%2Fplantree&env=DATABASE_URL&envDescription=Your+Personal+Database+Url&envLink=https%3A%2F%2Fdocs.plantree.xyz%2Fguides%2Fenvironment-variables%23database_url&project-name=plantree&repository-name=plantree)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fplantree-xyz%2Fplantree&env=DATABASE_URL&envDescription=Your+Personal+Database+Url&envLink=https%3A%2F%2Fdocs.plantree.xyz%2Fguides%2Fenvironment-variables%23database_url&project-name=my-plantree-blog&repository-name=my-plantree-blog&fork=true)
 
 <Steps>
 
@@ -56,8 +56,16 @@ Select the Git scope and enter your desired repository name:
 
 ### Configure environment
 
-Set up the required environment variables and click the deploy button. To get the `DATABASE_URL`, 
-refer to the [Create Vercel PostgresSQL guide](/guides/create-vercel-postgres):
+Enter your PostgreSQL connection URL (`DATABASE_URL`). If you haven't set up a database yet, 
+refer to our [guide](/guides/create-vercel-postgres) to create a PostgreSQL Database on Vercel.
+
+A typical `DATABASE_URL` looks like this:
+
+```text
+postgres://username:password@hostname:port/database_name?sslmode=require
+```
+
+Once you've configured the necessary environment variables, click the deploy button:
 
 ![vercel-deploy-config-env](/images/screenshot/vercel-deploy-config-env.png)
 
