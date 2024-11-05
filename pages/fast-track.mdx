@@ -2,87 +2,79 @@ import { Callout } from 'nextra/components'
 import { Steps } from 'nextra/components'
 
 # Fast Track
-
 Enjoy your Plantree in **10 minutes**!
-
-## Step 1: Deploy on Vercel
-
-Deploy your Plantree project with one click:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fplantree-xyz%2Fplantree&env=DATABASE_URL&envDescription=Your+Personal+Database+Url&envLink=https%3A%2F%2Fdocs.plantree.xyz%2Fguides%2Fenvironment-variables%23database_url&project-name=my-plantree-blog&repository-name=my-plantree-blog&fork=true)
 
 <Steps>
 
-{<h3>Connect to GitHub</h3>}
+{<h3>Click Deploy Button</h3>}
 
-Ensure your GitHub account is connected to Vercel. If it's already connected, you can skip this step:
+👇 Start your deployment on [Vercel](https://vercel.com/):
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fplantree-xyz%2Fplantree&env=DATABASE_URL&envDescription=Your+Personal+Database+Url&envLink=https%3A%2F%2Fdocs.plantree.xyz%2Fguides%2Fenvironment-variables%23database_url&project-name=my-plantree-blog&repository-name=my-plantree-blog&fork=true)
+
+{<h3>Create Git Repository</h3>}
+
+After accessing Vercel's deployment page, you'll be prompted to select a Git repository:
+
+<Callout type="warning" emoji="⚠️">
+  If your Vercel account is not yet linked to GitHub, you will be redirected to complete the linking process.
+</Callout>
 
 ![vercel-deploy-connect-git-provider](/images/screenshot/vercel-deploy-connect-git-provider.png)
 
-{<h3>Clone repository</h3>}
-
-Select the Git scope and enter your desired repository name:
+Once linking is complete, click the **Create** button:
 
 ![vercel-deploy-clone-repository](/images/screenshot/vercel-deploy-clone-repository.png)
 
-{<h3>Bind Database</h3>}
+{<h3>Configure Project</h3>}
 
-Enter your PostgreSQL connection URL (`DATABASE_URL`). If you haven't set up a database yet, 
-refer to our [guide](/guides/create-vercel-postgres) to create a PostgreSQL Database on Vercel.
+Now, configure the necessary parameters to run the service.
 
-A typical `DATABASE_URL` looks like this:
+You'll need a PostgreSQL connection URL, which looks like this:
 
 ```text
 postgres://username:password@hostname:port/database_name?sslmode=require
 ```
 
-Once you've configured the necessary environment variables, click the deploy button:
+<Callout type="info">
+  If you don't have a URL yet, refer to our [guide](/guides/create-vercel-postgres) to create a PostgreSQL database on Vercel and acquire the URL.
+</Callout>
+
+Enter the details in the designated fields as shown below, then click **Deploy** to proceed:
 
 ![vercel-deploy-config-env](/images/screenshot/vercel-deploy-config-env.png)
 
-{<h3>Await deployment</h3>}
+{<h3>Deploy</h3>}
 
-Deployment will take a few minutes. Please be patient.
+Deployment will take a few minutes. Please be patient:
 
 ![vercel-deploy-wait](/images/screenshot/vercel-deploy-wait.png)
 
-{<h3>Deployment completed</h3>}
-
-Congratulations! Your Plantree project is now live on Vercel. You can directly open the preview to visit your site, or configure your custom domain for access.
+Congratulations! The service has been successfully deployed. Only two steps remain: create your TreeId and bind it to your Plantree website:
 
 ![vercel-depoly-compeleted](/images/screenshot/vercel-depoly-compeleted.png)
 
-</Steps>
-
-## Step 2: Create 🌱 **TreeId**
+{<h3>Create TreeId</h3>}
 
 <Callout type="info">
-  TreeId is your personal "key" to the Web3 world
+  TreeId is your personal "key" to the Web3 world.
 </Callout>
 
-Follow these steps to create your TreeId:
-
-1. Visit [plantree.xyz](https://www.plantree.xyz/create-space).
-2. **Connect** your wallet and **sign** the request.
-3. **Complete** the registration form with the required information.
-4. Click the **Create site** button to finalize your TreeId creation.
+To create your TreeId, visit [plantree.xyz](https://www.plantree.xyz/create-space) and fill out the application form:
 
 ![web3-tree-id-create](/images/screenshot/web3-tree-id-create.png)
 
-Upon successful creation, your TreeId will be displayed below:
+Once created, your TreeId will be displayed below:
 
 ![web3-tree-id-view](/images/screenshot/web3-tree-id-view.png)
 
-## Step 3: Bind 🌱 **TreeId**
+{<h3>Bind TreeId</h3>}
 
-To bind your TreeId to your Plantree website, follow these steps:
-
-1. Navigate to your **personal Plantree website**. If you've forgotten the link, you can find it in your Vercel Dashboard.
-2. **Connect** your wallet to log in.
-3. Click on your **avatar** in the top corner.
-4. Select **Settings** from the dropdown menu.
-5. Enter your TreeId in the designated field and submit it.
+Final step: Open your personal Plantree website. Once logged in, click on your avatar to access the settings page. 
+In the Web3 configuration section, enter your TreeId and click **Save**:
 
 ![plantree-setting-tree-id](/images/screenshot/plantree-setting-tree-id.png)
+
+</Steps>
 
 🎉🎉🎉 Congratulations! Your Plantree is now set up and ready to grow. 🌱
