@@ -16,7 +16,7 @@ export const Logo = () => {
           fontWeight: "bold",
         }}
       >
-        Plantree
+        PenX
       </span>
     </div>
   );
