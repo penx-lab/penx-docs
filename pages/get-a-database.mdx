@@ -1,0 +1,57 @@
+# Get Postgres Database
+
+You can use **_any standard Postgres_**, version 14 and above.
+
+This includes Postgres you host yourself, or Postgres hosted by managed database hosting providers.
+
+## Get a Postgres for free
+
+- [Supabase](https://supabase.com)
+- [Neon](https://neon.tech)
+- [Vercel Postgres](https://vercel.com/docs/storage/vercel-postgres)
+
+## Runing Postgres with Docker Compose
+
+If you have access to a server and prefer to host your own PostgreSQL instance, Docker Compose offers a simple way to deploy and manage PostgreSQL containers. Below is an example of how to set up PostgreSQL using Docker Compose.
+
+### Docker Compose Configuration
+
+Create a `docker-compose.yml` file with the following content:
+
+```yml
+version: "3"
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_DB: penx
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: penx
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres/data:/var/lib/postgresql/data
+volumes:
+  postgres_data:
+```
+
+### Running the Container
+
+To start your PostgreSQL container, navigate to the directory containing your docker-compose.yml file and run:
+
+```bash
+docker-compose up -d
+```
+
+### Accessing Your Database
+
+Once your container is running, you can connect to your PostgreSQL instance using a connection string (referred to as DATABASE_URL). The format will look like this:
+
+```base
+postgresql://user:penx@<your-server-ip>:5432/penx
+
+```
+
+Replace `<your-server-ip>` with the IP address of your server.

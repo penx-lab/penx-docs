@@ -6,12 +6,13 @@ export default {
     title: "🚀 Deploy in 10 minutes",
   },
   deployment: "Deployment",
+  "get-a-database": "Get a Database",
+  "environment-variables": "Environment Variables",
+  contributing: "Contributing",
   about: {
     title: "About",
     type: "page",
   },
-  "environment-variables": "Environment Variables",
-  contributing: "Contributing",
   contact: {
     title: "Contact ↗",
     type: "page",

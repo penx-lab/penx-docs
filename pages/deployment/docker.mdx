@@ -1,3 +1,5 @@
+import { Callout } from "nextra/components";
+
 # Deploy with Docker
 
 This document provides a guide for deploying PenX with Docker.
@@ -15,6 +17,11 @@ docker run -d \
   -p 3000:3000 \
   penxio/penx:latest
 ```
+
+<Callout type="info">
+  If you don't have a URL yet, refer to this [guide](/get-a-database) to get a
+  PostgreSQL database.
+</Callout>
 
 A real world example:
 
