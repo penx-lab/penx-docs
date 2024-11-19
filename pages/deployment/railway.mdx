@@ -1,0 +1,28 @@
+import { Callout } from "nextra/components";
+
+# Deploy to railway
+
+You can deploy PenX to [Railway](https://railway.app/).
+
+<Callout type="info">
+  If you don't have a URL yet, refer to this [guide](/get-a-database) to get a
+  PostgreSQL database.
+</Callout>
+
+## Deploy with template
+
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.app/template/wuSyrf?referralCode=EiXQmr)
+
+## Deploy!
+
+in your terminal, navigate to the directory where fly.toml is located and run `fly launch --copy-config`:
+
+```bash
+fly launch --copy-config
+```
+
+## Real world example
+
+When deployed successfully, you should get a URL like:
+
+https://penx.up.railway.app
