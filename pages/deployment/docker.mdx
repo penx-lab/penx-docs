@@ -1,0 +1,27 @@
+# Deploy with Docker
+
+This document provides a guide for deploying PenX with Docker.
+
+The PenX service is packaged using Docker and published to Docker Hub at [hub.docker.com/r/penxio/penx](https://hub.docker.com/r/penxio/penx).
+
+## Docker Run
+
+To start PenX service with docker run, execute the following one command:
+
+```bash
+docker run -d \
+  --name penx-self-hosted \
+  -e DATABASE_URL={{postgresql_database_url}} \
+  -p 3000:3000 \
+  penxio/penx:latest
+```
+
+A real world example:
+
+```bash
+docker run -d \
+  --name penx-self-hosted \
+  -e DATABASE_URL=postgresql://user:demo@43.154.135.183:5437/demo \
+  -p 3000:3000 \
+  penxio/penx:latest
+```

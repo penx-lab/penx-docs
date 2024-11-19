@@ -5,18 +5,17 @@ export default {
   "deploy-in-10-minutes": {
     title: "🚀 Deploy in 10 minutes",
   },
-  "getting-started": "Getting Started",
-  guides: "Guides",
   deployment: "Deployment",
-  contributing: "Contributing",
   about: {
     title: "About",
     type: "page",
   },
+  "environment-variables": "Environment Variables",
+  contributing: "Contributing",
   contact: {
     title: "Contact ↗",
     type: "page",
-    href: "https://twitter.com/shuding_",
+    href: "https://x.com/0xzio_eth",
     newWindow: true,
   },
 };

@@ -1,3 +1,6 @@
 export default {
-  vercel: "Deploy to Vercel",
+  vercel: "Vercel",
+  flyio: "Fly.io",
+  docker: "Docker",
+  "docker-compose": "Docker Compose",
 };

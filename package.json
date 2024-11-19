@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 3009",
     "build": "next build",
     "start": "next start"
   },
