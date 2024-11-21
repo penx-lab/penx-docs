@@ -13,7 +13,7 @@ This guide will walk you through deploying your PenX project on Vercel.
 
 ## Account Setup
 
-Make sure you have accounts on both GitHub and Vercel. Log in to both platforms, then connect your GitHub account to Vercel:
+Make sure you have accounts on both GitHub and Vercel. Log in to both platforms:
 
 <Cards>
   <Cards.Card
@@ -36,49 +36,51 @@ Make sure you have accounts on both GitHub and Vercel. Log in to both platforms,
 
 ## PenX Deployment
 
-Click the button below to start the deployment process:
+<Steps>
+
+### Step1: Click To Start
+
+👇 Click the deploy button.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fpenx-lab%2Fpenx&env=DATABASE_URL&envDescription=Your+Personal+Database+Url&envLink=https%3A%2F%2Fdocs.penx.io%2Fguides%2Fenvironment-variables%23database_url&project-name=my-penx-blog&repository-name=my-penx-blog&fork=true)
 
-<Steps>
+Vercel will clone the [Penx]('https://github.com/penx-lab/penx') and deploy the site for you.
 
-### Connect to GitHub
+### Step2: Choose Git Providers
 
-Ensure your GitHub account is connected to Vercel. If it's already connected, you can skip this step:
+After clicking the deploy button, you'll be redirected to the Vercel page. Don't worry! We've preconfigured the necessary parameters and settings for you.
 
 ![vercel-deploy-connect-git-provider](/images/screenshot/vercel-deploy-connect-git-provider.png)
 
-### Clone repository
+### Step3: Check Git Scope And Repository Name
 
-Select the Git scope and enter your desired repository name:
+Ensure that the Git scope and repository name are correct:
 
 ![vercel-deploy-clone-repository](/images/screenshot/vercel-deploy-clone-repository.png)
 
-### Configure environment
+### Step4: Configure The DATABASE URL.
 
-Enter your PostgreSQL connection URL (`DATABASE_URL`). If you haven't set up a database yet, 
-refer to our [guide](/guides/create-vercel-postgres) to create a PostgreSQL Database on Vercel.
-
-A typical `DATABASE_URL` looks like this:
-
-```text
-postgres://username:password@hostname:port/database_name?sslmode=require
-```
-
-Once you've configured the necessary environment variables, click the deploy button:
+<Callout type="info">
+  If you don't have a URL yet, refer to this [guide](/get-a-database) to get a
+  PostgreSQL database.
+</Callout>
 
 ![vercel-deploy-config-env](/images/screenshot/vercel-deploy-config-env.png)
 
-### Await deployment
+here is a example:
 
-Deployment will take a few minutes. Please be patient.
+```text
+postgresql://user:demo@43.154.135.183:5437/demo
+```
+
+### Step5: Click The Deploy Button
+
+Click the **Deploy button** and wait for the process to complete.
 
 ![vercel-deploy-wait](/images/screenshot/vercel-deploy-wait.png)
 
-### Deployment completed
+Congratulations! The site has been successfully deployed.
 
-Once deployment is successful, your PenX project is live on Vercel. You can view your project and manage it through the Vercel dashboard.
-
-![vercel-depoly-compeleted](/images/screenshot/vercel-depoly-compeleted.png)
+![vercel-depoly-completed](/images/screenshot/vercel-depoly-completed.png)
 
 </Steps>
